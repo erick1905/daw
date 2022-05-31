@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+ {% block content %}
+
+<style>
+        /*.footer-copyright{*/
+    /*    position:relative;*/
+    /*}*/
+    .parallax-container{
+        height: 100vh;
+
+    }
+    .parallaxblur{
+        background-color: #4784a791;
+        position:absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .landing_title{
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-70%);
+        color:white;
+
+    }
+    .landing_title_text{
+        font-size:150px;
+        text-align:center;
+        margin-bottom: 0px;
+        text-shadow: 2px 2px #000000b8;
+    }
+    .landing_subtitle{
+        margin-top: 0px;
+        font-size:30px;
+        text-align:center;
+        text-shadow: 2px 2px #000000b8;
+    }
+
+    .landing_go_bottom{
+        bottom:0;
+        font-size:40px;
+        color:white;
+        cursor:pointer;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-20%);
+    }
+    .landing_login_bottom{
+        position:absolute;
+        bottom:0%;
+         left: 50%;
+          transform: translate(-50%,-700%);
+    }
+    .landing1{
+        background-color:#0066ff;
+    }
+    .cv{
+        position:relative;
+        margin-top: 6%;
+        text-align: justify;
+    }
+
+    @media screen and (max-width: 600px) {
+        .landing_title_text{
+            font-size:70px;
+        }
+        .landing_subtitle{
+            font-size:15px;
+        }
+        .landing_go_bottom{
+            transform: translate(-50%,-80px);
+        }
+    }
+    .header{
+         text-shadow: 2px 2px #000000b8;
+    }
+
+</style>
+     <div class="parallax-container">
+     <div class="parallax">
+         <img src="/media/images/12.jpeg">
+         <div class="parallaxblur">
+             <div class="landing_title">
+                 <p class="landing_title_text"><i class="material-icons" style= "font-size:100px ">track_changes</i> DAW</p>
+                 <p class=" landing_subtitle white-text ">desarrollo de aplicaciones web</p>
+             </div>
+         </div>
+
+     </div>
+     <a href="/login" class="waves-effect waves-light btn landing_login_bottom transparent "><i class="material-icons left">forward</i>Iniciar sesión</a>
+     <i class=" material-icons landing_go_bottom">arrow_drop_down_circle</i>
+     </div>
+     <div class=" section landing1">
+         <div class=" container">
+             <center><h2 class=" header white_text">Acerca de </h2></center>
+             <div class="row">
+                 <div class=" col s12 m12 l6 white-text cv"> Esta pagina te permite ver las aplicaciones que se desarrollaron en la materia de DAW</div>
+                 <div class=" col s6 l4 offset-s3 offset-m3 offset-12" >
+                     <img class=" responsive-img" src="/media/images/13.jpeg" width="400px">
+
+                 </div>
+             </div>
+         </div>
+
+     </div>
+     <div class="section white">
+         <div class="container">
+             <div class="row">
+                 <div class=" col s12 m6 l3 black-text">
+                     <center><i class="large material-icons"> cloud_circle</i>
+                    <div>Aplicaciones en la nube</div></center>
+                 </div>
+                 <div class=" col s12 m6 l3 black-text">
+                    <center><i class="large material-icons"> insert_chart</i>
+                   <div>Interfaces dinámicas</div></center>
+                </div>
+                <div class=" col s12 m6 l3 black-text">
+                    <center><i class="large material-icons"> notifications</i>
+                   <div>Notificacion de movimientos</div></center>
+                </div>
+                <div class=" col s12 m6 l3 black-text">
+                    <center><i class="large material-icons"> pind_drop</i>
+                   <div>Organizacion de aplicaiones</div></center>
+                </div>
+             </div>
+             <center> <button class=" btn red btn-small">Ver mas</button></center>
+         </div>
+     </div>
+     <div class="section landing1">
+         <div class=" container"> 
+             <center><h2 class=" header white-text">Beneficios</h2></center>
+             <div class="row">
+                 <div class="col s6 l4 offset-s3 offset-m3">
+                     <img class="responsive-img" src=" /media/images/15.jpeg" width=" 400px">
+                 </div>
+                 <div class=" col s12 m12 l6 white-text offset-m1 offset-l2">
+                     <ul>
+                         <li> <i class="material-icons">check</i> Recapitualar temario de front y back-end</li>
+                         <li> <i class="material-icons">check</i> Desarrollar paginas web de forma mas adecuada</li>
+                         <li> <i class="material-icons">check</i> Manejo de lenguajes de programacion</li>
+                         <li> <i class="material-icons">check</i> Manejo de frameworks DAW</li>
+                         <li> <i class="material-icons">check</i> Desarrollo de estructuras de codigo</li>
+                         <li> <i class="material-icons">check</i> Manejo de bases de datos </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+     {% endblock content %}
+     {%  block js%}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.materialboxed').materialbox();
+            });
+            $(document).ready(function(){
+                $('.parallax').parallax();
+            });
+        </script>
+        {% endblock js %}
+
